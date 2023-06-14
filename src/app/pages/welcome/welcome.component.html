@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="container">
+    <!--  WELCOME  -->
+    <div id="welcome">
+        <h1>
+        <span class="text-2xl font-bold"> Hello there, </span>
+        Welcome atlantica-ventures 👋
+        </h1>
+    </div>
+</div>
+<atlantica-ventures-text></atlantica-ventures-text>
+<figure id="bar"></figure>
+<div class="page" *ngIf="todos$ | async as todos">
+    <ng-container *ngFor="let todo of todos">
+    <div>{{todo.EnglishName}}</div>
+    </ng-container>
+</div>
