@@ -1,6 +1,6 @@
 import { TextModule } from '@/shared';
-import { TodoNgRxFacade } from '@/state/ngrx/facade/todo.facade';
-import { ITodoFacade } from '@/state/ngrx/interface/todo.interface';
+import { TodoFacade } from '@/state/ngrx/facade/todo.facade';
+import { ITodoFacade } from '@/core/models/todo.interface';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import * as d3 from 'd3';
@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 })
 
 export class WelcomeComponent implements OnInit {
-  private readonly todoFacade: ITodoFacade = inject(TodoNgRxFacade);
+  private readonly todoFacade: ITodoFacade = inject(TodoFacade);
   todos$ = this.todoFacade.todos$;
 
   private data = [

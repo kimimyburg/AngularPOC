@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { TODOS_FEATURE_KEY, TodosState, todosAdapter } from '../reducers/todos.reducer';
+import { TODOS_FEATURE_KEY, TodosState, todosAdapter } from '@state/index';
 
 // Lookup the 'Todos' feature state managed by NgRx
 export const selectTodosState =

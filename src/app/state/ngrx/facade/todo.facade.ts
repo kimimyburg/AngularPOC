@@ -1,12 +1,12 @@
 import { Injectable, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { TodoActions, TodoSelectors } from '@state/index';
-import { ITodoFacade } from '@state/interface/todo.interface';
+import {ITodoFacade} from '@core/index'
 
 @Injectable({
   providedIn: 'root',
 })
-export class TodoNgRxFacade implements ITodoFacade {
+export class TodoFacade implements ITodoFacade {
   private readonly store = inject(Store);
 
   todos$ = this.store.select(TodoSelectors.selectAllTodos);

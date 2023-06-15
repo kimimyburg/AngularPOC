@@ -1,4 +1,4 @@
-import { TodoEntity } from '@state/models/todos.models';
+import { TodoEntity } from '@state/index';
 import { Observable } from 'rxjs';
 
 /**

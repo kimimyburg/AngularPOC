@@ -7,8 +7,7 @@ import {
   on,
 } from '@ngrx/store';
 
-import {TodoActions} from '@state/index';
-import { TodoEntity } from '@state/index';
+import { TodoEntity, TodoActions } from '@state/index';
 
 export const TODOS_FEATURE_KEY = 'todos';
 

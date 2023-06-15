@@ -1,6 +1,5 @@
-import { Update } from '@ngrx/entity';
-import { createAction, createActionGroup, props } from '@ngrx/store';
-import { TodoEntity } from '@state/models/todos.models';
+import { createAction, props } from '@ngrx/store';
+import { TodoEntity } from '@state/index';
 
 export const initTodos = createAction('[Todos Page] Init');
 

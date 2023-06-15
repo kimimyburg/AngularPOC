@@ -1,3 +1,3 @@
-import { ITodo } from "@/core/models/todo.models";
+import { ITodo } from "@core/index";
 
 export type TodoEntity = ITodo;

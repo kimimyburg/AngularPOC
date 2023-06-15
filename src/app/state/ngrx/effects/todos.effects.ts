@@ -1,9 +1,9 @@
-import { Injectable, inject } from '@angular/core';
+import { inject } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
-import { map, exhaustMap, catchError, switchMap } from 'rxjs/operators';
-import { TodoService } from '@core/services/';
-import {TodoActions, TodoEntity} from '@state/index';
+import { map, catchError, switchMap } from 'rxjs/operators';
+import { TodoService } from '@core/services';
+import {TodoActions} from '@state/index';
 
 export const loadTodos = createEffect(
   (actions$ = inject(Actions), todoService = inject(TodoService)) => {
