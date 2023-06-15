@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import * as d3 from 'd3';
 import { Observable } from 'rxjs';
+import * as signalR from '@microsoft/signalr';  
+import { environment } from 'src/environment/environment.dev';
+
 @Component({
   standalone: true,
   imports: [TextModule, CommonModule],
@@ -33,6 +36,25 @@ export class WelcomeComponent implements OnInit {
     const svg = this.createSvg();
     this.drawBars(this.data);
     this.todoFacade.loadTodos();
+
+    const connection = new signalR.HubConnectionBuilder()  
+    .configureLogging(signalR.LogLevel.Information)  
+    .withUrl(environment.baseUrl + 'Connection',
+    {
+      skipNegotiation: true,
+      transport: signalR.HttpTransportType.WebSockets
+    })  
+    .build();  
+
+    connection.start().then(function () {  
+      console.log('SignalR Connected!');  
+    }).catch(function (err) {  
+      return console.error(err.toString());  
+    });  
+  
+    connection.on("receive", (name) => {  
+      console.log('name',)
+    }); 
 }
 
   private createSvg(): void {
