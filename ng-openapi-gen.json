@@ -1,0 +1,5 @@
+{
+    "$schema": "node_modules/ng-openapi-gen/ng-openapi-gen-schema.json",
+    "input": "http://192.168.50.62:5109/swagger/v1/swagger.json",
+    "output": "src/app/core/test"
+  }
