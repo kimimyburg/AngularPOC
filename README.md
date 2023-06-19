@@ -1,51 +1,51 @@
 ## Documentation
-NX - `https://nx.dev/`
-NGRX - `https://ngrx.io`
-Angular - `https://angular.io/`
-Tailwind CSS - `https://tailwindcss.com`
-Ng-Openapi-Gen - `https://github.com/cyclosproject/ng-openapi-gen#readme`
-D3 - `https://d3js.org`
-RXJS - `https://rxjs.dev`
+NX - `https://nx.dev/`  
+NGRX - `https://ngrx.io`  
+Angular - `https://angular.io/`  
+Tailwind CSS - `https://tailwindcss.com`  
+Ng-Openapi-Gen - `https://github.com/cyclosproject/ng-openapi-gen#readme`  
+D3 - `https://d3js.org`  
+RXJS - `https://rxjs.dev`  
 
 ## Before you begin
-Globally install nx to be able to run application
-`npm install --global nx@latest`
+Globally install nx to be able to run application  
+`npm install --global nx@latest`  
 
 ## Start the app 
 To start the development server run `nx serve AtlanticaVentures`. Open your browser and navigate to http://localhost:4200/. Happy coding!
 
 ## Generate code
-Create new component: `nx g @nx/angular:component my-component`
-Create store `nx g @nx/angular:ngrx products --directory +state/products --no-interactive --facade`
-## Running tasks
+Create new component: `nx g @nx/angular:component my-component`  
+Create store `nx g @nx/angular:ngrx products --directory +state/products --no-interactive --facade`  
+## Running tasks  
 
-To execute tasks with Nx use the following syntax:
-
-```
-nx <target> <project> <...options>
-```
-
-You can also run multiple targets:
+To execute tasks with Nx use the following syntax:  
 
 ```
-nx run-many -t <target1> <target2>
+nx <target> <project> <...options>  
 ```
 
-..or add `-p` to filter specific projects
+You can also run multiple targets:  
 
 ```
-nx run-many -t <target1> <target2> -p <proj1> <proj2>
+nx run-many -t <target1> <target2>  
 ```
 
-Targets can be defined in the `package.json` or `projects.json`. Learn more [in the docs](https://nx.dev/core-features/run-tasks).
+..or add `-p` to filter specific projects  
 
-## Want better Editor Integration?
+```
+nx run-many -t <target1> <target2> -p <proj1> <proj2>  
+```
 
-Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provides autocomplete support, a UI for exploring and running tasks & generators, and more! Available for VSCode, IntelliJ and comes with a LSP for Vim users.
+Targets can be defined in the `package.json` or `projects.json`. Learn more [in the docs](https://nx.dev/core-features/run-tasks).  
 
-## Ready to deploy?
+## Want better Editor Integration?  
+ 
+Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provides autocomplete support, a UI for exploring and running tasks & generators, and more! Available for VSCode, IntelliJ and comes with a LSP for Vim users.  
 
-Just run `nx build demoapp` to build the application. The build artifacts will be stored in the `dist/` directory, ready to be deployed.
+## Ready to deploy?  
+
+Just run `nx build demoapp` to build the application. The build artifacts will be stored in the `dist/` directory, ready to be deployed.  
 
 ## Set up CI!
 
